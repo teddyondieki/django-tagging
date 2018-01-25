@@ -2,6 +2,12 @@
 Django Tagging Changelog
 ========================
 
+Version 0.4.6, 14th October 2017:
+--------------------------------
+
+* Fix IntegrityError while saving inconsistent tags
+* Update tag name length to use MAX_TAG_LENGTH setting
+
 Version 0.4.5, 6th September 2016:
 ----------------------------------
 
