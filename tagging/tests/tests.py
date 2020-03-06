@@ -8,7 +8,6 @@ from django.core.exceptions import ImproperlyConfigured
 from django.db.models import Q
 from django.test import TestCase
 from django.test.utils import override_settings
-from django.utils import six
 
 from tagging import settings
 from tagging.forms import TagAdminForm
@@ -385,7 +384,7 @@ class TestBasicTagging(TestCase):
         Tag.objects.update_tags(self.dead_parrot, 'föo')
         items = TaggedItem.objects.all()
         self.assertEqual(len(items), 1)
-        self.assertEqual(six.text_type(items[0]), "dëad [föo]")
+        self.assertEqual(str(items[0]), "dëad [föo]")
 
     def test_update_tags_with_none(self):
         # start off in a known, mildly interesting state
