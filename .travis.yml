@@ -14,8 +14,7 @@ env:
     - DJANGO=3.0 DATABASE_ENGINE=mysql
 
 install:
-    - pip install -U setuptools
-    - python bootstrap.py
+    - pip install -U setuptools zc.buildout
     - ./bin/buildout versions:django=$DJANGO
     - sh -c "if [ '$DATABASE_ENGINE' = 'postgres' ];
       then
