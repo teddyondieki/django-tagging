@@ -26,7 +26,7 @@ install:
       fi"
     - sh -c "if [ '$DATABASE_ENGINE' = 'mysql' ];
       then
-        pip install mysqlclient < 1.3.14;
+        pip install mysqlclient;
         mysql -e 'create database tagging CHARACTER SET utf8 COLLATE utf8_general_ci;';
         mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql;
       fi"
