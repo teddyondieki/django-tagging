@@ -6,7 +6,7 @@ import math
 
 from django.db.models.query import QuerySet
 from django.utils.encoding import force_text
-from django.utils.translation import ugettext as _
+from django.utils.translation import gettext as _
 
 # Font size distribution algorithms
 LOGARITHMIC, LINEAR = 1, 2
