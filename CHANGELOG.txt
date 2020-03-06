@@ -2,6 +2,12 @@
 Django Tagging Changelog
 ========================
 
+Version 0.5.0, 6th March 2020:
+------------------------------
+
+* Drop support for Python 2.
+* Compatiblity fix for Django 2.2 and Django 3.0.
+
 Version 0.4.6, 14th October 2017:
 --------------------------------
 
