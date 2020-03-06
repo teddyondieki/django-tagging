@@ -15,7 +15,7 @@ env:
 
 install:
     - pip install -U setuptools zc.buildout
-    - ./bin/buildout versions:django=$DJANGO
+    - buildout versions:django=$DJANGO
     - sh -c "if [ '$DATABASE_ENGINE' = 'postgres' ];
       then
         pip install psycopg2;
