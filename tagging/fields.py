@@ -6,9 +6,9 @@ from django.db.models.fields import CharField
 from django.utils.translation import gettext_lazy as _
 
 from tagging import settings
+from tagging.forms import TagField as TagFormField
 from tagging.models import Tag
 from tagging.utils import edit_string_for_tags
-from tagging.forms import TagField as TagFormField
 
 
 class TagField(CharField):

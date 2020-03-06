@@ -1,19 +1,19 @@
 """
 Models and managers for tagging.
 """
-from django.db import models
+from django.contrib.contenttypes.fields import GenericForeignKey
+from django.contrib.contenttypes.models import ContentType
 from django.db import connection
+from django.db import models
 from django.utils.encoding import smart_text
 from django.utils.translation import gettext_lazy as _
-from django.contrib.contenttypes.models import ContentType
-from django.contrib.contenttypes.fields import GenericForeignKey
 
 from tagging import settings
 from tagging.utils import LOGARITHMIC
-from tagging.utils import get_tag_list
 from tagging.utils import calculate_cloud
-from tagging.utils import parse_tag_input
 from tagging.utils import get_queryset_and_model
+from tagging.utils import get_tag_list
+from tagging.utils import parse_tag_input
 
 
 qn = connection.ops.quote_name
